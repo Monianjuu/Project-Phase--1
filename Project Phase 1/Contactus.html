@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+body {
+  text-align: center;
+  background-image: url('contactus.jpg');
+ background-repeat: no-repeat;
+background-attachment: fixed;  
+  background-size: cover;
+}
+footer
+{
+left: 0;
+height: 50px;
+width: 100%;
+background-color: black;
+color: white;
+text-align:center;
+margin-top: 55px;
+}
+     .topnav {
+  overflow: hidden;
+  background-color: #333333;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 20px 16px;
+  padding-left: 30px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: rgb(230, 18, 18);
+}
+
+.topnav a:active {
+  background-color: #04AA6D;
+  color: white;
+}
+img{
+    width: 70px;
+    padding: 10px;
+    margin-right: 700px;
+}
+.container
+{
+  width:500px;
+  border: 1px;
+  background-color: rgb(240,248,255);
+  
+}
+</style>
+<script>
+  function validateFristname()
+  {
+  var firstname = document.getElementById("firstname").value;
+  var fristnameError = document.getElementById("firstnameError");
+ if(firstname.trim() == "")
+  {
+    firstnameError.innerHTML = "Firstname is required";
+   }
+ }
+function validateLastname()
+{
+  var lastname = document.getElementById("lastname").value;
+  var lastnameError = document.getElementById("lastnameError");
+if(lastname.trim() == "")
+{
+lastnameError.innerHTML = "Lastname is required";
+}
+}
+function validateDescription()
+{
+  var description = document.getElementById("description").value;
+  var descriptionError = document.getElementById("descriptionError");
+if(description.trim() == "")
+{
+  descriptionError.innerHTML = "Description is required";
+}
+}
+</script>
+</head>
+<body>
+  <div class="topnav">
+    <img src="logo.jpg">
+    <a href="Contactus.html">Contact us</a>
+    <a href="Registration.html">Sign up</a>
+    <a href="Userlogin.html">Sign in</a>
+    <a href="Aboutus.html">About us</a>
+    <a href="welcome.html">Home</a>
+  
+  </div>
+  <center>
+  <div class="container">
+<div>
+<h1>Contact Us</h1>
+<h3>We are ready to lead you into the future</h3>
+<form >
+<div style="padding:20px">
+<label >First name</label>
+<input style="width:195px;height:20px"type="text" id="firstname" name="firstname" placeholder="enter your firstname" onfocusout="validateFristname()" required>
+<div id="firstnameError" style="color: red;" > </div>
+</div>
+<div style="padding:20px">
+<label>Last name</label>
+<input style="width:195px;height:20px"type="text" id="lastname" name="lastname" placeholder="enter your lastname"onfocusout="validateLastname()" required>
+<div id="lastnameError" style="color: red;" > </div>
+</div>
+</div> 
+<div style="padding:20px">
+<label>Description</label>
+<input style="width:200px;height:50px" type="text" id="description" name="description" placeholder="write something here....." onfocusout="validateDescription()" required>
+<div id="descriptionError" style="color: red;" > </div>
+</div> 
+<div style="padding:50px;"><button style="height:35px;width:150px;border-radius:15px" type="submit">Send message</button>
+</div>
+</div>
+</center>>
+<div>
+  <footer>  <p>Contact us: 9875424556 ,abc@bitsathy.ac.in</p> </footer>
+   </div>
+ </form>
+</body>
+</html>
